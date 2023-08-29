@@ -34,9 +34,9 @@ list-style: none;
 .Main-Contant{
     padding-left:270px 
 }
-#Hidden{
+ #Hidden{
     display: none;
-}
+} 
 .padd-15{
     padding-left: 15px;
     padding-right: 15px;
@@ -449,10 +449,126 @@ background-color: var(--skin-color);
     text-align: justify;
     
 }
+/* services */
+.Service .Container{
+    padding-bottom: 40px;
+}
+.Service .Service-item{
+    margin-bottom: 30px;
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+}
+.Service .Service-item .Service-item-inner{
+    background-color: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 10px;
+    padding: 30px 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.Service .Service-item .Service-item-inner:hover{
+    box-shadow: 0 0 20px rgba(48, 46 ,77 ,0.15);
+}
+.Service .Service-item .Service-item-inner .Icon{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 30px;
+    text-align: center;
+    transition: all 0.3s ease ;
+}
+.Service .Service-item .Service-item-inner .Icon .fa {
+    font-size: 40px;
+    line-height: 60px;
+    color: var(--skin-color);
+    transition: all 0.3s ease;
+}
+.Service .Service-item .Service-item-inner:hover .Icon{
+    background: var(--skin-color);
+    
+}
+.Service .Service-item .Service-item-inner:hover .Icon .fa{
+    font-size: 25px ;
+    color: #fff;
+}
+.Service .Service-item .Service-item-inner h4{
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--text-black-900);
+    text-transform: capitalize;
 
+}
+.Service .Service-item .Service-item-inner p{
+    font-size: 16px;
+    color: var(--text-black-700);
+    line-height: 25px;
+}
+/* portfolio  */
+.Portfolio .Container{
+    padding-bottom: 40px;
+}
+.Portfolio .Portfolio-heading{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 40px;
+}
+.Portfolio .Portfolio-heading h2{
+    color: var(--text-black-900);
+    font-weight: 400;
+}
+.Portfolio .Portfolio-item{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    margin-bottom: 30px;
+}
+.Portfolio .Portfolio-item-inner{
+    border: 6px solid var(--bg-black-100);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.Portfolio .Portfolio-item-inner .Portfolio-img img{
+    width: 100%;
+    display: block;
+}
+/* contact */
+.Contact-tittle{
+    color: var(--skin-color);
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.Contact-sub-tittle{
+    color: var(--skin-color);
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 60px;
+}
+.Contact .Contact-info-item{
+    flex: 0 0 25%;
+    max-width: 25%;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.Contact .Contact-info-item .Icon{
+    display: inline-block;
+}
+.Contact .Contact-info-item .Icon .fa{
+    font-size: 25px;
+    color: var(--skin-color);
 
-
-
-
-
-
+}
+.Contact .Contact-info-item h4{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-black-900);
+    text-transform: capitalize;
+    margin: 15px 0 15px;
+}
+.Contact .Contact-info-item p{
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--text-black-700);
+    font-weight: 400;
+}
