@@ -6,7 +6,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/skins/color-1.css">
+    <!-- ===Style Switcher=== -->
+    <link rel="stylesheet" href="../css/skins/color-1.css" class="Alternate-style" title="Color-1" disabled >
+    <link rel="stylesheet" href="../css/skins/color-2.css" class="Alternate-style" title="Color-2" disabled>
+    <link rel="stylesheet" href="../css/skins/color-3.css" class="Alternate-style" title="Color-3" disabled>
+    <link rel="stylesheet" href="../css/skins/color-4.css" class="Alternate-style" title="Color-4" disabled>
+    <link rel="stylesheet" href="../css/skins/color-5.css" class="Alternate-style" title="Color-5" disabled>
+    <link rel="stylesheet" href="../css/style-switcher.css">
 </head>
 <body>
     <!-- =====Main conatiner start===== -->
@@ -20,18 +26,18 @@
                 <span></span>
             </div>
                 <ul class="Nav">
-                    <li><a href="#" class="Active"><i class="fa fa-home"></i>Home</a></li>
-                    <li><a href="#"><i class="fa fa-user"></i> About</a></li>
-                    <li><a href="#"><i class="fa fa-list"></i>Services</a></li>
-                    <li><a href="#"><i class="fa fa-briefcase"></i>Portfolio</a></li>
-                    <li><a href="#"><i class="fa fa-comments"></i>Contact</a></li>
+                    <li><a href="#Home" class="Active"><i class="fa fa-home"></i>Home</a></li>
+                    <li><a href="#About"><i class="fa fa-user"></i> About</a></li>
+                    <li><a href="#Services"><i class="fa fa-list"></i>Services</a></li>
+                    <li><a href="#Portfolio"><i class="fa fa-briefcase"></i>Portfolio</a></li>
+                    <li><a href="#Contact"><i class="fa fa-comments"></i>Contact</a></li>
                 </ul>
         </div>
         <!-- ====Aside End==== -->
         <!-- ====Main Contant Start=== -->
         <div class="Main-Contant">
              <!-- ==== Home Section start -->
-             <section class="Home Section" id="Hidden" >
+             <section class="Home Section" id="Home" >
               <div class="Container">
                 <div class="Row">
                     <div class="Home-info padd-15">
@@ -49,7 +55,7 @@
              </section>
              <!-- ==== Home Section end ====  -->
              <!-- ==== About Section start -->
-             <section class="About Section">
+             <section class="About Section" id="About">
                 <div class="Container">
                     <div class="Row">
                         <div class="Section-tittle padd-15">
@@ -237,7 +243,7 @@
              </section>
              <!-- ==== About Section End -->
              <!-- ==== Services Section start -->
-             <section class="Service Section">
+             <section class="Service Section" id="Services">
                 <div class="Conatiner">
                     <div class="Row">
                         <div class="Section-tittle padd-15" >
@@ -321,7 +327,7 @@
              </section>
              <!-- ==== Services Section End === -->
              <!-- === Portfolio Section start ===-->
-             <section class="Portfolio Section">
+             <section class="Portfolio Section" id="Portfolio">
                 <div class="Container">
                     <div class="Row">
                         <div class="Section-tittle padd-15">
@@ -374,7 +380,7 @@
             </section>
                   <!--=====Poertfolio section end====== -->
                   <!--===== conatact section start====== -->
-                  <section class="Contact Section">
+                  <section class="Contact Section" id="Contact">
                        <div class="Container">
                          <div class="Row">
                             <div class="Section-tittle padd-15">
@@ -420,28 +426,28 @@
                        <div class="Row">
                         <div class="Contact-form padd-15">
                             <div class="Row">
-                                <div class="Form-item col-6 padd-15">
+                                <div class="Form-item Col-6 padd-15">
                                     <div class="Form-group">
                                         <input type="email" class="Form-control" placeholder="email">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="Row">
-                                <div class="Form-item col-12 padd-15">
+                                <div class="Form-item Col-12 padd-15">
                                     <div class="Form-group">
                                         <input type="text" class="Form-control" placeholder="subject">
                                     </div>
                                 </div>
                             </div>
                             <div class="Row">
-                                <div class="Form-item col-12 padd-15">
+                                <div class="Form-item Col-12 padd-15">
                                     <div class="Form-group">
-                                        <textarea name="" id=""  class="Form-control" cols="30" rows="10"></textarea>
+                                        <textarea name="" id=""  class="Form-control" placeholder="Message"></textarea>
                                     </div>
                                 </div>
                             </div>
                             <div class="Row">
-                            
+                                <div class="Form-item Col-12 padd-15">
+                            <button type="submit" class="Btn" style="border: none;">Send Message</button>
+                                </div>  
                             </div>
                         </div>
                        </div>
@@ -452,7 +458,29 @@
 
     </div>
     <!-- ===Main Container End==== -->
+    <!-- ===Style switcher start===-->
+    <div class="Style-switcher">
+        <div class="Style-switcher-toggler S-icon">
+            <i class="fas fa-cog fa-spin"></i>
+        </div>
+        <div class="Day-night S-icon">
+            <i class="fas "></i>
+        </div>
+        <h4>Theme Colors</h4>
+        <div class="Colors">
+            <span class="Color-1" onclick="setActiveStyle('Color-1')"></span>
+            <span class="Color-2" onclick="setActiveStyle('Color-2')"></span>
+            <span class="Color-3" onclick="setActiveStyle('Color-3')"></span>
+            <span class="Color-4" onclick="setActiveStyle('Color-4')"></span>
+            <span class="Color-5" onclick="setActiveStyle('Color-5')"></span>
+        </div>
+    
+    </div>
+       <!-- ===Style switcher end===-->
+
 </body>
 <!-- Js File -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="../Js/script.js"></script>
+<script src="../Js/style-switcher.js"></script>
 </html> 

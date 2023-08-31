@@ -6,6 +6,14 @@
     --text-black-900:#302e4d;
     --text-black-700:#504e70;
 }
+body.dark{
+    --bg-black-900:#151515;
+    --bg-black-100:#222222;
+    --bg-black-50:#393939;
+    --text-black-900:#ffffff;
+    --text-black-700:#e9e9e9;
+
+}
 body{
     line-height: 1.5;
     font-size: 16px;
@@ -126,7 +134,7 @@ font-size: 30px;
 text-transform: capitalize;
 }
 .Aside .Logo a{
-    color: var(--bg-black-900);
+    color: var(--skin-color);
     font-weight: 700;
     padding: 15px 20px;
     letter-spacing: 5px;
@@ -222,6 +230,7 @@ margin-right: 15px;
     min-height: 100vh;
     display: flex;
     color: var(--text-black-900);
+    padding-top: 80px;
 }
 .Home .Home-info
 {
@@ -572,3 +581,85 @@ background-color: var(--skin-color);
     color: var(--text-black-700);
     font-weight: 400;
 }
+.Contact .Contact-form{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.Contact .Contact-form .Col-6{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.Contact .Contact-form .Col-12{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.Contact .Contact-form .Form-item{
+    margin-bottom: 30px;
+}
+.Contact .Contact-form .Form-item .Form-control{
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background-color: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    padding: 10px 15px;
+    font-size: 16px;
+    color: var(--text-black-700);
+    transition: all 0.3s ease;
+}
+.Contact .Contact-form.Form-item .Form-control:focus{
+    box-shadow: 0 0 20px rgba(48, 46 ,77 ,0.15);
+}
+.Contact .Contact-form .Form-item textarea.Form-control{
+height: 140px;
+}
+.Contact .Contact-form .Btn{
+    height: 50px;
+    padding: 0 50px;
+}
+
+/* responsive designs */
+
+@media (max-width:1190px) {
+    .Aside{
+        left: -270px;
+    }
+    .Main-Contant{
+        padding-left: 0;
+    }
+    .About .About-contant .Personal-info .Info-item p span{
+        display: block;
+    }
+
+}
+@media (max-width:991px) {
+    .Contact .Contact-info-item,
+    .Portfolio .Portfolio-item,
+    .Service .Service-item{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .Home .Home-info{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .Home .Home-img{
+        display: none;
+    }
+}
+@media (max-width:767px) {
+    .Contact .Contact-form .Col-6,
+    .Contact .Contact-info-item,
+    .Portfolio .Portfolio-item,
+    .Service .Service-item,
+    .About .About-contant .Education,
+    .About .About-contant .Experience,
+    .About .About-contant .Skills,
+    .About .About-contant .Personal-info{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+}
+
+
