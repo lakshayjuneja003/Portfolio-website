@@ -38,9 +38,31 @@ list-style: none;
     display: block;
     padding: 0 30px;
     opacity: 1;
+    position: fixed;
+    left: 270px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: all 0.3s ease;
 }
-.Main-Contant{
-    padding-left:270px 
+.Section.back-section{
+    z-index: 1;
+}
+.Section.Active{
+    z-index: 2;
+    opacity: 1;
+    animation: slideSection 1s ease;
+}
+@keyframes slideSection {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
 }
  #Hidden{
     display: none;
@@ -126,6 +148,7 @@ list-style: none;
     height: 100%;
     align-items: center;
     z-index: 10;
+    transition: all 0.3s ease;
 }
 .Aside .Logo{
 position: absolute;
@@ -177,6 +200,7 @@ left: 0;
     display: none;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s ease;
 }
 
 .Aside .Nav-toggler span{
@@ -185,7 +209,9 @@ left: 0;
     background:var(--skin-color);
     display: inline-block;
     position: relative;
-
+}
+.Aside .Nav-toggler.open span{
+    background-color: transparent;
 }
 .Aside .Nav-toggler span::before{
     content:'';
@@ -194,6 +220,14 @@ left: 0;
     background:var(--skin-color);
     position: absolute;
     top: -6px;
+}
+.Aside .Nav-toggler.open span::before{
+    transform: rotate(45deg);
+    top: 0;
+}
+.Aside .Nav-toggler.open span::after{
+    transform: rotate(-45deg);
+    top: 0;
 }
 .Aside .Nav-toggler span::after{
     content:'';
@@ -624,8 +658,21 @@ height: 140px;
     .Aside{
         left: -270px;
     }
-    .Main-Contant{
-        padding-left: 0;
+    .Aside.open{
+        left: 0;
+    }
+    .Aside .Nav-toggler.open{
+        left: 300px;
+    }
+    .Aside .Nav-toggler{
+        display: flex;
+        left: 30px;
+    }
+    .Section {
+        left: 0;
+    }
+    .Section.open{
+        left:270px
     }
     .About .About-contant .Personal-info .Info-item p span{
         display: block;
