@@ -25,13 +25,13 @@ function setActiveStyle(color) {
     });
 }
 
-// Load saved color style on page load or set default color
+// Load saved color style on page load or set default to red (Color-1)
 window.addEventListener("load", () => {
     const selectedStyle = localStorage.getItem('selectedStyle');
     if (selectedStyle) {
         setActiveStyle(selectedStyle);
     } else {
-        // Set a default color if none is selected (e.g., Color-1)
+        // Set default to red (Color-1) for first-time visitors
         setActiveStyle('Color-1');
     }
 });
