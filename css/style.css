@@ -32,6 +32,11 @@ body{
 ul{
 list-style: none;
 }
+.Section.Active {
+  z-index: 2;
+  opacity: 1;
+  animation: slideSection 1s ease;
+}
 .Section{
     background: var(--bg-black-900);
     min-height: 100vh;

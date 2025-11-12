@@ -15,7 +15,7 @@ window.addEventListener('scroll', () => {
 const alternateStyles = document.querySelectorAll(".Alternate-style");
 
 function setActiveStyle(color) {
-    localStorage.setItem('selectedStyle', color); // Save selected style in localStorage
+    localStorage.setItem('selectedStyle', color);
     alternateStyles.forEach((style) => {
         if (color === style.getAttribute('title')) {
             style.removeAttribute("disabled");
@@ -31,7 +31,6 @@ window.addEventListener("load", () => {
     if (selectedStyle) {
         setActiveStyle(selectedStyle);
     } else {
-        // Set default to red (Color-1) for first-time visitors
         setActiveStyle('Color-1');
     }
 });
@@ -43,17 +42,18 @@ dayNight.addEventListener("click", () => {
     const isDarkMode = document.body.classList.toggle("dark");
     dayNight.querySelector("i").classList.toggle("fa-sun");
     dayNight.querySelector("i").classList.toggle("fa-moon");
-
-    // Save the current theme mode in localStorage
     localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
 });
 
 // Load saved theme mode on page load
 window.addEventListener("load", () => {
     const darkMode = localStorage.getItem('darkMode');
-    if (darkMode === 'enabled') {
-        document.body.classList.add("dark");
+    
+    // Default to dark mode if not set
+    if (darkMode === 'enabled' || darkMode === null) {
+        document.body.classList.add("dark");wh
         dayNight.querySelector("i").classList.add("fa-sun");
+        localStorage.setItem('darkMode', 'enabled');
     } else {
         dayNight.querySelector("i").classList.add("fa-moon");
     }
