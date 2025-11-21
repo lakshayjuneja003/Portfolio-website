@@ -121,6 +121,7 @@ list-style: none;
     flex-wrap: wrap;
     margin-left: -15px;
     margin-right: -15px;
+    margin-bottom: 50px;
     position: relative;
 }
 .Btn{
@@ -502,11 +503,9 @@ background-color: var(--skin-color);
 }
 .Service{
     margin-top: 55px;
+    margin-bottom: 50px;   
 }
-/* services */
-.Service .Container{
-    padding-bottom: 40px;
-}
+
 .Service .Service-item{
     margin-bottom: 30px;
     flex: 0 0 33.33%;
