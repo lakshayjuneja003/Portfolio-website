@@ -1,4 +1,4 @@
-  @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&display=swap');
 :root{
     --bg-black-900:#f2f2f2;
     --bg-black-100:#fdf9ff;
@@ -17,7 +17,8 @@ body.dark{
 body{
     line-height: 1.5;
     font-size: 16px;
-    font-size: "poppins","sans-serif";
+    font-family: "Stack Sans Text", sans-serif;
+    font-weight: 300;
 }
 *{
     margin: 0;
@@ -488,14 +489,14 @@ background-color: var(--skin-color);
     font-weight: 700;
     font-size: 15px;
     margin-bottom: 15px;
-    color: var(--text-black-900);
+    color: var(--skin-color);
     text-transform: capitalize;
 }
 .About .About-contant .Timeline .Timeline-text{
     line-height: 25px;
     font-size: 16px;
     text-align: justify;
-    
+    color: white;
 }
 /* services */
 .Service .Container{
