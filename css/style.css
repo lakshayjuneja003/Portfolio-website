@@ -716,6 +716,10 @@ height: 140px;
         flex: 0 0 100%;
         max-width: 100%;
     }
+    .Contact-tittle {
+        overflow-y: scroll;
+        font-size: 15px;
+    }
 
 }
 
