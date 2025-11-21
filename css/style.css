@@ -375,7 +375,6 @@ h3.My-proffesion{
 .About .About-contant .Personal-info .Info-item p span{
 font-weight: 400;
 color: var(--text-black-700);
-margin-left: 4px;
 display: inline-block;
 }
 .About .About-contant .Personal-info .Buttons{
