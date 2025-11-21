@@ -127,6 +127,8 @@ list-style: none;
     font-size: 16px;
     font-weight: 500;
     padding: 12px 35px;
+    margin-bottom: 10px;
+    margin-right: 10px;
     background: var(--skin-color);
     color: white;
     border-radius: 40px;
@@ -497,6 +499,9 @@ background-color: var(--skin-color);
     font-size: 16px;
     text-align: justify;
     color: white;
+}
+.Service{
+    margin-top: 55px;
 }
 /* services */
 .Service .Container{
