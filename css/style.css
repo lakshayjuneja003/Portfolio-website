@@ -687,6 +687,10 @@ height: 140px;
     .About .About-contant .Personal-info .Info-item p span{
         display: block;
     }
+    .Contact-tittle {
+        overflow-y: scroll;
+        font-size: 20px;
+    }
 
 }
 @media (max-width:991px) {
@@ -702,6 +706,10 @@ height: 140px;
     }
     .Home .Home-img{
         display: none;
+    }
+    .Contact-tittle {
+        overflow-y: scroll;
+        font-size: 18px;
     }
 }
 @media (max-width:767px) {
